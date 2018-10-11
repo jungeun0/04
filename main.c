@@ -4,19 +4,26 @@
 /* run this program using the console pauser or add your own getch, system("pause") or input loop */
 
 int main(int argc, char *argv[]) {
-	int num = 0;
-	char c;
+	int num = 12;
+	int i;
 	
-	printf("문자를 입력하세요  : ");
 	
-	while ( (c = getchar() ) != '\n')
-	{	if('0'<=c && c<='9')
-		{
-		 num+=1;
+	do{
 		
+		printf("Guess the number! \n");
+		scanf("%d", &i);
+		
+		
+		if (i>num){
+			printf("low!\n");
 		}
+		else if(i<num){
+			printf("high!\n");
+		}
+	}while(i != num);
 	
-	}
-	printf("The number of digits is %d", num);
+	printf("congratuation!\n");
+	
+
 	return 0;
 }
