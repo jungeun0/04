@@ -4,23 +4,19 @@
 /* run this program using the console pauser or add your own getch, system("pause") or input loop */
 
 int main(int argc, char *argv[]) {
-	int i;
+	int num = 0;
 	char c;
 	
 	printf("문자를 입력하세요  : ");
-	scanf("%c", &c);
 	
-	if ('A'<=c&& c<='Z'){
-		printf(" 대문자입니다.\n ") ;
+	while ( (c = getchar() ) != '\n')
+	{	if('0'<=c && c<='9')
+		{
+		 num+=1;
+		
+		}
+	
 	}
-	else if ('a'<=c && c<='z'){
-		printf("소문자입니다.\n");
-	}
-	else if ('0'<=c&& c<='9'){	
-		printf("숫자입니다.\n");
-	}
-	else {
-		printf("기타 문자입니다. \n");
-	}
+	printf("The number of digits is %d", num);
 	return 0;
 }
