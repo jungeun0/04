@@ -6,23 +6,16 @@
 int main(int argc, char *argv[]) {
 	int i;
 	
-	printf("정수 하나를 입력하세요 \n");
+	printf("정수 하나를 입력하세요\n");
 	scanf("%d", &i);
 	
-	if (i>0){
-		printf("양수입니다.\n");
-	}else if(i<0){
-		printf("음수입니다.\n");
-	}else {
-		printf("0입니다.\n");
-	} 
-
-
-
-
-
-
-
+	if (i>=0){
+		printf("절댓값은 %d입니다.\n", i);
+		}	 
+	else if (i<0){
+		printf("절댓값은 %d입니다.\n", -i);
+	}
+	
 
 	return 0;
 }
